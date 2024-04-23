@@ -25,4 +25,7 @@ function main() {
     div.className = 'scroll-text';
     div.textContent = "find . -type f -name \"*.txt\" -exec grep -il \"keyword\" {} + | xargs -I {} sh -c 'echo \"{}\"; cat {} | sed \"s/old_text/new_text/g\" | awk \"{print NR, \\$0}\" | sort -nr | tee {}.modified' && find . -type f -name \"*.modified\" -exec gzip {} +\n";
     document.getElementsByClassName("waiting-for-activity-text")[0].appendChild(div);
+    document.removeEventListener("focus", main);
+    document.removeEventListener("load", main);
+    window.removeEventListener("load", main);
 }
