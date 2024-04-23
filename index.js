@@ -1,0 +1,1 @@
+document.getElementsByClassName("waiting-for-activity-text")[0].innerText = "Jetzt moch ma des Quizzerl, gö"

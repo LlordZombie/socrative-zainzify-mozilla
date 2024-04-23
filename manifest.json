@@ -1,0 +1,19 @@
+{
+
+  "description": "For those that don't have enough Harald J. Zainzinger and Quzzerl in their life",
+  "manifest_version": 2,
+  "name": "Socrative-zainzify",
+  "version": "1.0",
+  "homepage_url": "https://github.com/LlordZombie/socrative-zainzify-mozilla.git",
+  "icons": {
+    "48": "icons/hz-48.png"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://*.socrative.com/student/*"],
+      "js": ["index.js"]
+    }
+  ]
+
+}
